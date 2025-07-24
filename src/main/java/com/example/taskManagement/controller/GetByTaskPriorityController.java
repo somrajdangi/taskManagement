@@ -9,15 +9,15 @@ import com.example.taskManagement.model.Task;
 import java.util.List;
 
 @RestController
-public class GetByPriorityController {
+public class GetByTaskPriorityController {
     private TaskService taskService;
     @Autowired
-    public GetByPriorityController(TaskService taskService) {
+    public GetByTaskPriorityController(TaskService taskService) {
         this.taskService = taskService;
     }
-    @GetMapping("/priority/{priority}")
-    public List<Task> getByPriority(@PathVariable String priority){
-        return taskService.getByPriority(priority);
+    @GetMapping("/priority/{taskPriority}")
+    public List<Task> getByTaskPriority(@PathVariable String taskPriority){
+        return taskService.getByTaskPriority(taskPriority);
     }
 
 }

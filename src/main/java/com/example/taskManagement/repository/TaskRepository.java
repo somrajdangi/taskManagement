@@ -8,8 +8,8 @@ import java.util.List;
 
 @Repository
 public interface TaskRepository extends MongoRepository<Task,String>{
-    List<Task> findByPriority(String priority);
-    List<Task> findByStatus(String status);
+    List<Task> findByTaskPriority(String taskPriority);
+    List<Task> findByTaskStatus(String taskStatus);
     List<Task> findByTitle(String title);
 
 }

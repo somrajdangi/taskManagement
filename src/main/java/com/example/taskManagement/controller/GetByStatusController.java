@@ -18,7 +18,7 @@ public class GetByStatusController {
     @GetMapping("/status/{status}")
 
     public List<Task> getByStatus(@PathVariable String status){
-        return taskService.getByStatus(status);
+        return taskService.getByTaskStatus(status);
 
     }
 }

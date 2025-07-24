@@ -27,17 +27,17 @@ public class TaskService {
     public List<Task> getAllTask(){
         return taskRepository.findAll();
     }
-    public List<Task> getByPriority(String priority){
-        return taskRepository.findByPriority(priority);
+    public List<Task> getByTaskPriority(String taskPriority){
+        return taskRepository.findByTaskPriority(taskPriority);
     }
-    public List<Task> getByStatus(String status){
-        return taskRepository.findByStatus(status);
+    public List<Task> getByTaskStatus(String taskStatus){
+        return taskRepository.findByTaskStatus(taskStatus);
     }
     public List<Task> getByTitle(String title){
         return taskRepository.findByTitle(title);
     }
-    public Task getById(String id){
-        return taskRepository.findById(id).orElse(null);
+    public Task getById(String userId){
+        return taskRepository.findById(userId).orElse(null);
     }
 
 
