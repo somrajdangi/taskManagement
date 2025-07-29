@@ -5,7 +5,8 @@ import lombok.Data;
 import org.springframework.data.annotation.Id;
 import org.springframework.data.mongodb.core.mapping.Document;
 
-import java.sql.Timestamp;
+
+import java.util.Date;
 import java.time.LocalDateTime;
 
 @Data
@@ -20,8 +21,8 @@ public class Task {
     private String description;
     private boolean active;
     private String userId;
-    private Timestamp createdTimestamp;
-    private Timestamp updatedTimestamp;
+    private LocalDateTime createdTimestamp;
+    private LocalDateTime updatedTimestamp;
     private TaskStatus taskStatus;
     private TaskPriority taskPriority;
     private LocalDateTime dueDate;
